@@ -1,0 +1,18 @@
+
+ASSIGNMENT I
+Siddhant Shingi(2016CS10310)
+
+Inverted Index:
+use of unordered map so as to make search O(1).
+use of stemming, stop words removal, lowercase, punchuation removal as part of text preprocessing
+things tried: more weight given to tags but had no effect on the metric
+
+BM25 variant:
+formula: log((N-df+0.5)/(df+0.5)) * (((k1+1)*k2*tf)/(k1*(1-b+b*(L/Lavg))+k2*tf)+δ) * ((k3+1)*qf)/(k3+qf) 
+ 
+N= total documents
+df= document frequency
+Term frequency(tf)
+Query frequency(qf)
+
+intresting observation: negetive value of delta resulted in better values of metric
